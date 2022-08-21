@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            //Programa para contar el numero de digitos de un numero entero.
+            var num, cd;
+            num = prompt("Ingrese un numero entero");
+            cd = 0;
+            while(num != 0){
+                num = parseInt(num/10);
+                cd = cd + 1;
+            }
+            alert("El numero ingresado tiene " + cd + "digitos");
+        </script>
+    </body>
+</html>

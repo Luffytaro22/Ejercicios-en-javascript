@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            // Programa para determinar si el ultimo digito de dos numeros enteros son iguales o no.
+            var num1 = prompt("Ingrese un numero entero");
+            var num2 = prompt("Ingrese un numero entero");
+            if(num1 < 0){
+                num1 = num1 * (-1);
+            }
+            if(num2 < 0){
+                num2 = num2 * (-1); 
+            }
+            var ud1 = num1 - parseInt(num1/10) * 10; //Por ejemplo, 55/10 = 5.5 = 5 (tomando la parte entera) * 10 = 50. 55 - 50 = 5. 
+            var ud2 = num2 - parseInt(num2/10) * 10;
+                if(ud1 === ud2){
+                alert("El ultimo digito de un numero es igual al ultimo digito del otro");
+                }
+                else{
+                alert("El ultimo digito de un numero no es igual al ultimo digito del otro");
+                }
+        </script>
+    </body>
+</html>
