@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar la cantidad de digitos pares que tiene un numero de tres digitos.
+            var num0 = num1 = parseInt(prompt("Ingrese un numero entero de tres digitos"));
+            var sum = 0;
+            var dig1, dig2, dig3, R;
+            if(num0 < 0){
+                num0 = num1 = num0 * (-1);
+            }
+            while(num0 < 100 || num0 > 999){
+                num0 = num1 = parseInt(prompt("Ingrese un numero entero de tres digitos"));
+            }
+            while(num0 < 1 || num0 > 9){
+                    num0 = parseInt(num0/10);
+                }
+            dig1 = num0;
+            dig2 = parseInt(num1/10);
+            dig2 = dig2 - parseInt(dig2/10) * 10;
+            dig3 = num1 - parseInt(num1/10) * 10;
+            if(dig1 % 2 == 0){
+                    dig1 = 1;
+                }
+            else{
+                    dig1 = 0;
+                }
+            if(dig2 % 2 == 0){
+                    dig2 = 1;
+                }
+            else{
+                dig2 = 0;
+            }
+            if(dig3 % 2 == 0){
+                dig3 = 1;
+            }
+            else{
+                dig3 = 0;
+            }
+            R = dig1 + dig2 + dig3;
+            alert("Hay " + R + " digitos pares");
+        </script>
+    </body>
+</html>

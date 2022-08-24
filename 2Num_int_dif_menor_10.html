@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            //Programa que lee dos numero enteros y mientras la diferencia de estos sea menor o igual a 10 se mostraran los numeros enteros comprendidos entre ambos numeros.
+            var num = [];
+            for(let i = 0; i <= 1; i++){
+                num[i] = parseInt(prompt("Ingrese un numero entero"));
+            }
+            var u = 1;
+            for(let i = 0; i <=1; i++){
+                if(Math.abs(num[i] - num[u]) <= 10){
+                    while(num[i] > num[u]){
+                        num[u]++;
+                        console.log(num[u]);
+                    }
+                    while(num[i] < num[u]){
+                        num[i]++;
+                        console.log(num[i]);
+                    }
+                }
+                u++;
+            }
+            
+        </script>
+    </body>
+</html>

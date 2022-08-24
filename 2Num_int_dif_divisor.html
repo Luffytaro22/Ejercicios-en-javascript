@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            //Programa que lee dos numero enteros e indica si la diferencia ente ambos es un divisor exacto de alguno de los numeros.
+            var num = [];
+            for(let i = 0; i <= 1; i++){
+                num[i] = parseInt(prompt("Ingrese un numero entero"));
+            }
+            var u = 1;
+            i = 0;
+            var num3 = Math.abs(num[i]) - Math.abs(num[u])
+            switch(true){
+                case num[i] % num3 == 0:
+                    alert(num3 + " es un divisor de " + num[i]);
+                    break;
+                case num[u] % num3 == 0:
+                    alert(num3 + " es un divisor de " + num[u]);
+                    break;
+                default:
+                    alert(num3 + " no es divisor");
+            }
+            
+        </script>
+    </body>
+</html>

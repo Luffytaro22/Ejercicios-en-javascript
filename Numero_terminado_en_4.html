@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            var num = parseInt(prompt("Ingrese un numero entero"));
+            if(num < 0){
+                num = num * (-1);
+            }
+            var num1 = num - parseInt(num/10) * 10;
+            if(num1 === 4){
+                alert("Numero terminado en 4");
+            }
+            else{
+                alert("Numero no terminado en 4");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            //Programa que lee un numero entero de dos digitos y si es par muestra la suma de sus digitos, si es primo y menor que 10 muestra su ultimo digito y si es multiplo de 5 y menor que 30 muestra el primer digito.
+            var num = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+            var dig1, dig2, sum1;
+            while(num < 10 || num > 99){
+                num = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+                if(num < 0){
+                    num = num * (-1);
+                }
+            }
+            dig1 = parseInt(num/10);
+            dig2 = num - parseInt(num/10) * 10;
+            sum1 = dig1 + dig2;
+            switch(true){
+                case num % 2 == 0:
+                    alert("La suma de los digitos es de " + sum1);
+                    break;
+                case (num % 2 !=0) && (num < 10):
+                    alert("Su ultimo digito es " + dig2);
+                    break;
+                case (num % 5 == 0) && (num < 30):
+                    alert("El primero digito es " + dig1);
+                    break;
+            }
+        </script>
+    </body>
+</html>

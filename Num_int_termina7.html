@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            //Programa para leer un numero entero y determinar si termina en 7.
+            var num = parseInt(prompt("Ingrese un numero entero"));
+            if(num < 0){
+                num = num * (-1);
+            }
+            var num1 = num - parseInt(num/10) * 10;
+            if(num1 == 7){
+                alert("El numero termina en 7");
+            }
+            else{
+                alert("El numero no termina en 7");
+            }
+        </script>
+    </body>
+</html>

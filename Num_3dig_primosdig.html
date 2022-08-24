@@ -1,0 +1,57 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar cuantos digitos primos tiene un numero de tres digitos.
+            var num = num1 = parseInt(prompt("Ingrese un numero de tres digitos"));
+            var dig1, dig2, dig3, R;
+            if(num < 0){
+                num = num * (-1);
+            }
+            while(num < 100 || num > 999){
+                num = parseInt(prompt("Ingrese un numero de tres digitos"));
+            }
+            dig1 = num;
+            while(num < 1 || num > 9){
+                num = parseInt(num/10);
+            }
+            dig2 = parseInt(num1/10);
+            dig2 = dig2 - parseInt(dig2/10) * 10;
+            dig3 = num1 - parseInt(num1/10) * 10;
+            if(dig1 == 0 || dig1 == 1 || dig1 == 2){
+                dig1 = 1;
+            }
+            if(dig2 == 0 || dig2 == 1 || dig2 == 2){
+                dig2 = 1;
+            }
+            if(dig3 == 0 || dig3 == 1 || dig3 == 2){
+                dig3 = 1;
+            }
+            for(let i = 2; i <= dig1-1; i++){
+                if(dig1 % 2 != 0){
+                    dig1 = 1;
+                }
+                else{
+                    dig1 = 0;
+                }
+            }
+            for(let i = 2; i <= dig2-1; i++){
+                if(dig2 % 2 != 0){
+                    dig2 = 1;
+                }
+                else{
+                    dig2 = 0;
+                }
+            }
+            for(let i = 2; i <= dig3-1; i++){
+                if(dig3 % 2 != 0){
+                    dig3 = 1;
+                }
+                else{
+                    dig3 =  0;
+                }
+            }
+            R = dig1 + dig2 + dig3;
+            alert("Tiene " + R + " numeros primos");
+        </script>
+    </body>
+</html>

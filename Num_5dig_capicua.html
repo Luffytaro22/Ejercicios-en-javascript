@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            //Programa para leer un numero entero de cinco digitos y comprobar si es capicuo.
+            var num = num1 = parseInt(prompt("Ingrese un numero de cinco digitos"));
+            if(num < 0){
+                num = num1 = num * (-1);
+            }
+            while(num < 10000 || num > 99999){
+                num = num1 = parseInt(prompt("Ingrese un numero de cinco digitos"));
+            }
+            if(num1 === num.toString().split("").reverse().join("")){
+                alert("Es un numero capicuo");
+            } 
+            else{
+                alert("No es un numero capicuo");
+            }
+            
+            //const capicua = (numero)=>(
+            //    numero = numero.toString()
+            //    return numero.split(**).reverse().join(**) === numero
+
+        </script>
+    </body>
+</html>

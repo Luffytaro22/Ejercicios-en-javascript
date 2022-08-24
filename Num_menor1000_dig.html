@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            //Programa para ingresar un numero entero menor que 1000 y determinar cuantos digitos tiene.
+            var num = parseInt(prompt("Ingrese un numero entero menor que mil"));
+            var sum;
+            while(num >= 1000){
+                num = parseInt(prompt("Ingrese un numero entero menor que mil"));
+            }
+            sum = 0;
+            while(num != 0){
+                num = parseInt(num/10);
+                sum++;
+            }
+            alert("El numero de digitos es de " + sum);
+        </script>
+    </body>
+</html>

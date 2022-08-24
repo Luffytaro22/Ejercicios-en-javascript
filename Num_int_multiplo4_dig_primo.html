@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            //Programa pra ingresar un numero entero y si es multiplo de 4 determina si su ultimo digito es primo.
+            var num = parseInt(prompt("Ingrese un numero entero"));
+            var dig;
+            if(num % 4 == 0){
+                dig = num - parseInt(num/10) * 10;
+                if(dig % 2 != 0){
+                    alert("Su ultimo digito es primo");
+                }
+                else{
+                    alert("Su ultimo digito no es primo");
+                }
+            }
+        </script>
+    </body>
+</html>

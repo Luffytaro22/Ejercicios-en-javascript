@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <script>
+            //Programa para saber la posicion del mayor digito en un numero entero de tres digitos.
+            var num0 = num1 = parseInt(prompt("Ingrese un numero entero de tres digitos"));
+            var sum = 0;
+            var dig1;
+            var dig2;
+            var dig3;
+            if(num0 < 0){
+                num0 = num1 = num0 * (-1);
+            }
+            var dig1 = num1;
+            while(num0 != 0){
+                num0 = parseInt(num0/10);
+                sum++;
+            }
+            if(sum != 3){
+                while(num1 < 100 || num1 > 999){
+                    num1 = dig1 = parseInt(prompt("Ingrese un numero de tres digitos"));
+                    if(num1 < 0){
+                    dig1 = num1 = num1 * (-1);
+                    }
+                }
+                while(dig1 < 1 || dig1 > 9){
+                    dig1 = parseInt(dig1/10);
+                }
+                dig2 = parseInt(num1/10);
+                dig2 = dig2 - parseInt(dig2/10) * 10;
+                dig3 = num1 - parseInt(num1/10) * 10;
+                switch(true){
+                    case dig1 >= dig2 && dig1 >= dig3:
+                        alert("El mayor digito esta en la primera posicion");
+                        break;
+                    case dig2 >= dig1 && dig2 >= dig3:
+                        alert("El mayor digito esta en la segunda posicion");
+                        break;
+                    case dig3 >= dig1 && dig3 >= dig2:
+                        alert("El mayor digito esta en la tercera posicion");
+                        break;
+                }
+            }
+            else{
+                while(dig1 < 1 || dig1 > 9){
+                    dig1 = parseInt(dig1/10);
+                }
+                dig2 = parseInt(num1/10);
+                dig2 = dig2 - parseInt(dig2/10) * 10;
+                dig3 = num1 - parseInt(num1/10) * 10;
+                switch(true){
+                    case dig1 >= dig2 && dig1 >= dig3:
+                        alert("El mayor digito esta en la primera posicion");
+                        break;
+                    case dig2 >= dig1 && dig2 >= dig3:
+                        alert("El mayor digito esta en la segunda posicion");
+                        break;
+                    case dig3 >= dig1 && dig3 >= dig2:
+                        alert("El mayor digito esta en la tercera posicion");
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>

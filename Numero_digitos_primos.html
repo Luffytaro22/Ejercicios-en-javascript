@@ -1,0 +1,83 @@
+<html>
+    <body>
+        <script>
+            //Programa que dice si los digitos de un numero de dos digitos son primos o no.
+            var num = num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            var sum = 0;
+            var num1;
+            if(num < 0){
+                num = num3 = num * (-1);
+            }
+            var num2 = num3;
+            while(num != 0){
+                num = parseInt(num/10);
+                sum++;
+            }
+            if(sum != 2){
+                num = num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+                num1 = num3 - parseInt(num3/10) * 10;
+                while(num2 > 0 && num2 < 1 || num2 > 9){
+                    num2 = parseInt(num3/10);
+                }
+                if(num2 == 0 || num2 == 1 || num2 == 2){
+                    alert("El primero digito si es un numero primo");
+                }
+                if(num1 == 0 || num1 == 1 || num1 == 2){
+                    alert("El segundo digito si es un numero primo");
+                }
+                for(let i = 2; i <= num1-1; i++){
+                    if(num1 % 2 == 0){
+                        alert("El segundo digito no es un numero primo");
+                        break;
+                    }
+                    else{
+                        alert("El segundo digito si es un numero primo");
+                        break;
+                    }
+                }
+                for(let u = 2; u <= num2-1; u++){
+                    if(num2 % 2 == 0){
+                        alert("El primer digito no es un numero primo");
+                        break;
+                    }
+                    else{
+                        alert("El primer digito si es un numero primo");
+                        break;
+                    }
+                }
+            }
+            else{
+                num1 = num3 - parseInt(num3/10) * 10;
+                while(num2 > 0 && num2 < 1 || num2 > 9){
+                    num2 = parseInt(num3/10);
+                }
+                if(num2 == 0 || num2 == 1 || num2 == 2){
+                    alert("El primero digito si es un numero primo");
+                }
+                if(num1 == 0 || num1 == 1 || num1 == 2){
+                    alert("El segundo digito si es un numero primo");
+                }
+                for(let i = 2; i <= num1-1; i++){
+                    if(num1 % 2 == 0){
+                        alert("El segundo digito no es un numero primo");
+                        break;
+                    }
+                    else{
+                        alert("El segundo digito si es un numero primo");
+                        break;
+                    }
+                }
+                for(let u = 2; u <= num2-1; u++){
+                    if(num2 % 2 == 0){
+                        alert("El primer digito no es un numero primo");
+                        break;
+                    }
+                    else{
+                        alert("El primer digito si es un numero primo");
+                        break;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

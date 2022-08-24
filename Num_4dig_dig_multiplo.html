@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            //Programa para ingresar un numero entero de cuatro digitos y determinar si el primer digito es multiplo de los demas digitos.
+            var num = parseInt(prompt("Ingrese un numero de cuatro digitos"));
+            while(num < 1000 || num > 9999){
+                num = parseInt(prompt("Ingrese un numero de cuatro digitos"));
+                if(num < 0){
+                    num = num * (-1);
+                }
+            }
+            var num2 = num.toString().split("");
+            num2 = num2.map(x => parseInt(x));
+            u = 1;
+            var s = 0;
+                while(u <= 3){
+                    if(num2[u] % num2[0] == 0){
+                        alert(num2[0] + " es multiplo de " + num2[u]);
+                        s = 1;
+                    }
+                    u++;
+                }
+            if(s != 1){
+                alert(num2[0] + " no es multiplo de los demas digitos");
+            }
+        </script>
+    </body>
+</html>

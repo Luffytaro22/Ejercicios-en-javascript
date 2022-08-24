@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            //Programa para introducir dos numeros enteros y determinar cual es multiplo de cual.
+            var num1 = parseInt(prompt("Ingrese un numero entero"));
+            var num2 = parseInt(prompt("Ingrese un numero entero"));
+            switch(true){
+                case num1 % num2 == 0:
+                    alert(num1 + " es multiplo de " + num2);
+                    break;
+                case num2 % num1 == 0:
+                    alert(num2 + " es multiplo de " + num1);
+                    break;
+                default:
+                    alert("Ninguno es multiplo del otro");
+                    break;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            //Programa para leer un numero entero de 4 digitos y determinar si hay mas digitos pares o impares.
+            var num = parseInt(prompt("Ingrese un numero entero de cuatro digitos"));
+            var num1;
+            var cont1 = cont2 = 0;
+            while(num < 1000 || num > 9999 ){
+                num = parseInt(prompt("Ingrese un numero entero de cuatro digitos"));
+                if(num < 0){
+                    num = num * (-1);
+                }
+            }
+            num1 = num.toString().split("");
+            num1 = num1.map(x => parseInt(x));
+            for(let i = 0; i <= 3; i++){
+                if(num1[i] % 2 == 0){
+                    cont1++;
+                }
+                if(num1[i] % 3 == 0){
+                    cont2++;
+                }
+            }
+            alert("Hay " + cont1 + " digitos pares y " + cont2 + " digitos impares");
+        </script>
+    </body>
+</html>

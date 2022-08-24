@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar si alguno de los digitos de un numero de tres digitos es la suma de los otros.
+            var num = num1 = parseInt(prompt("Ingrese un numero de tres digitos"));
+            var dig1, dig2, dig3, R;
+            if(num < 0){
+                num = num * (-1);
+            }
+            while(num < 100 || num > 999){
+                num = parseInt(prompt("Ingrese un numero de tres digitos"));
+            }
+            while(num < 1 || num > 9){
+                num = parseInt(num/10);
+            }
+            dig1 = num;
+            dig2 = parseInt(num1/10);
+            dig2 = dig2 - parseInt(dig2/10) * 10;
+            dig3 = num1 - parseInt(num1/10) * 10;
+            switch(true){
+                case dig1 == dig2 + dig3:
+                    alert("El primero digito es la suma de los otros dos");
+                    break;
+                case dig2 == dig1 + dig3:
+                    alert("El segundo digito es la suma de los otros dos");
+                    break;
+                case dig3 == dig1 + dig2:
+                    alert("El tercer digito es la suma de los otros dos");
+                    break;
+                default:
+                    alert("Ningun digito es la suma de los otros dos");
+                    break;
+            }
+            
+        </script>
+    </body>
+</html>

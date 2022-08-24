@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            //Programa para leer un numero entero de cuatro digitos y determinar si el segundo digito es igual al penultimo.
+            var num = parseInt(prompt("Ingrese un numero de cuatro digitos"));;
+            while(num > 9999 || num < 1000){
+                num = parseInt(prompt("Ingrese un numero de cuatro digitos"));
+                if(num < 0){
+                    num = num * (-1);
+                }
+            }
+            var num1 = num.toString().split("");
+            if(num1[1] == num1[2]){
+                alert("El segundo digito es igual al penultimo");
+            }
+            else{
+                alert("El segundo digito no es igual al penultimo")
+            }
+        </script>
+    </body>
+</html>

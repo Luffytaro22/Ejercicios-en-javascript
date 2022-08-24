@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar en cual numero de tres numeros enteros de dos digitos esta el mayor digito.
+            var num1 = num01 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            var num2 = num02 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            var num3 = num03 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            var dig1, dig2, dig3, dig4, dig5, dig6;
+            while( (num1 < 10 || num1 > 99)){
+                num1 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            }
+            while( num2 < 10 || num2 > 99){
+                num2 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            }
+            while( num3 < 10 || num3 > 99){
+                num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            }
+            dig1 = parseInt(num1/10);
+            dig2 = num1 - parseInt(num1/10) * 10;
+            dig3 = parseInt(num2/10);
+            dig4 = num2 - parseInt(num2/10) * 10;
+            dig5 = parseInt(num3/10);
+            dig6 = num3 - parseInt(num3/10) * 10;
+            switch(true){
+                case dig1 >= dig3 && dig1 >=dig4 && dig1 >= dig5 && dig1 >= dig6 || dig2 >= dig3 && dig2 >=dig4 && dig2 >= dig5 && dig2 >= dig6:
+                    alert("El mayor digito se encuentra en " + num1);
+                    break;
+                case dig3 >= dig1 && dig3 >=dig2 && dig3 >= dig5 && dig3 >= dig6 || dig4 >= dig1 && dig4 >=dig2 && dig4 >= dig5 && dig4 >= dig6:
+                    alert("El mayor digito se encuentra en " + num2);
+                    break;
+                case dig5 >= dig1 && dig5 >=dig2 && dig5 >= dig3 && dig5 >= dig4 || dig6 >= dig1 && dig6 >=dig2 && dig6 >= dig3 && dig6 >= dig4:
+                    alert("El mayor digito se encuentra en " + num3);
+                    break;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            //Programa que lee un numero entero de dos digitos y si termina en 1 muestra su primer digito, si termina en 2 muestra la suma de sus digitos y si termina en 3 muestra el producto de sus digitos.
+            var num = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+            var dig1, dig2, sum1, mult;
+            while(num < 10 || num > 99){
+                num = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+                if(num < 0){
+                    num = num * (-1);
+                }
+            }
+            dig1 = parseInt(num/10);
+            dig2 = num - parseInt(num/10) * 10;
+            sum1 = dig1 + dig2;
+            mult = dig1 * dig2;
+            switch(true){
+                case dig2 == 1:
+                    alert(dig1);
+                    break;
+                case dig2 == 2:
+                    alert(sum1);
+                    break;
+                case dig2 == 3:
+                    alert(mult);
+                    break;
+            }
+        </script>
+    </body>
+</html>

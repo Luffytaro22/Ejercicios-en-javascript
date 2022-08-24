@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            //Programa para introducir un numero entero y si es multiplo de 4 muestra su mitad, si es multiplo de 5 muestra su cuadrado y si es multiplo de 6 muestra su primer digito. El numero no debe ser mayor que 100.
+            var num = num1 = parseInt(prompt("Ingrese un numero entero menor que 100"));
+            var dig; //Arreglo de digitos
+            while(num >= 100){
+                num = num1 = parseInt(prompt("Ingrese un numero entero menor que 100"));
+            }
+            dig = num.toString().split("");
+            dig = dig.map(x => parseInt(x));
+            if(num1 % 4 == 0){
+                alert(num1/2);
+            }
+            if(num1 % 5 == 0){
+                alert(Math.pow(num1, 2));
+            }
+            if(num1 % 6 == 0){
+                alert(dig[1]);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+    <body>
+        <script>
+            //Programa para saber la suma de los digitos de dos numeros enteros.
+            var num = num3 = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+            var num4 = num5 = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+            var sum = 0;
+            var sum2 = 0;
+            var num1;
+            var num6;
+            if(num < 0){
+                num = num3 = num * (-1);
+            }
+            if(num4 < 0){
+                num4 = num5 = num4 * (-1);
+            }
+            var num2 = num3;
+            var num7 = num5;
+            while(num != 0){
+                num = parseInt(num/10);
+                sum++;
+            }
+            while(num4 != 0){
+                num4 = parseInt(num4/10);
+                sum2++;
+            }
+            switch(true){
+                case sum != 2 && sum2 == 2: 
+                    num = num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+                    num1 = num3 - parseInt(num3/10) * 10;
+                    while(num2 > 0 && num2 < 1 || num2 > 9){
+                        num2 = parseInt(num3/10);
+                    }
+                    num6 = num5 - parseInt(num5/10) * 10;
+                    while(num7 > 0 && num7 < 1 || num7 > 9){
+                        num7 = parseInt(num5/10);
+                    }
+                    num3 = num1 + num2 + num6 + num7;
+                    alert("La suma es de " + num3);
+                    break;
+                case sum == 2 && sum2 == 2:
+                    num1 = num3 - parseInt(num3/10) * 10;
+                    while(num2 > 0 && num2 < 1 || num2 > 9){
+                        num2 = parseInt(num3/10);
+                    }
+                    num6 = num5 - parseInt(num5/10) * 10;
+                    while(num7 > 0 && num7 < 1 || num7 > 9){
+                        num7 = parseInt(num5/10);
+                    }
+                    num3 = num1 + num2 + num6 + num7;
+                    alert("La suma es de " + num3);
+                    break;
+                case sum2 != 2 && sum == 2:
+                    num4 = num5 = parseInt(prompt("Ingrese un numero de dos digitos"));
+                    num1 = num3 - parseInt(num3/10) * 10;
+                    while(num2 > 0 && num2 < 1 || num2 > 9){
+                        num2 = parseInt(num3/10);
+                    }
+                    num6 = num4 - parseInt(num4/10) * 10;
+                    while(num7 > 0 && num7 < 1 || num7 > 9){
+                        num7 = parseInt(num5/10);
+                    }
+                    num3 = num1 + num2 + num6 + num7;
+                    alert("La suma es de " + num3);
+                    break;
+                case sum != 2 && sum2 != 2:
+                    num = num3 = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+                    num4 = num5 = parseInt(prompt("Ingrese un numero entero de dos digitos"));
+                    num1 = num3 - parseInt(num3/10) * 10;
+                    while(num2 > 0 && num2 < 1 || num2 > 9){
+                        num2 = parseInt(num3/10);
+                    }
+                    num6 = num5 - parseInt(num5/10) * 10;
+                    while(num7 > 0 && num7 < 1 || num7 > 9){
+                        num7 = parseInt(num5/10);
+                    }
+                    num3 = num1 + num2 + num6 + num7;
+                    alert("La suma es de " + num3);
+                    break;
+            }
+        </script>
+    </body>
+</html>

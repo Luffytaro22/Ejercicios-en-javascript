@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar si un numero de dos digitos menor que 20 es primo
+            var num = num3 = parseInt(prompt("Ingrese un numero de dos digitos menor que 20"));
+            var sum = 0;
+            var num1;
+            if(num < 0){
+                num = num3 = num * (-1);
+            }
+            if(num >= 20){
+                num = num3 = parseInt(prompt("Ingrese un numero de dos digitos menor que 20"));
+            }
+            var num2 = num3;
+            while(num != 0){
+                num = parseInt(num/10);
+                sum++;
+            }
+            if(sum != 2){
+                num = num3 = parseInt(prompt("Ingrese un numero de dos digitos menor que 20"));
+                for(let i = 2; i <= num3-1; i++){
+                    if(num3 % 2 == 0){
+                        alert("No es un numero primo");
+                    }
+                    else{
+                        alert("Si es un numero primo");
+                    }
+                }
+            }
+            else{
+                for(let i = 2; i <= num3-1; i++){
+                    if(num3 % 2 == 0){
+                        alert("No es un numero primo");
+                        break;
+                    }
+                    else{
+                        alert("Si es un numero primo");
+                        break;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

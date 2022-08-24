@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <script>
+            //Programa que lee dos numeros enteros y si la diferencia entre ambos es par muestra la suma de sus digitos, si dicha diferencia es un numero primo menor que 10 entonces muestra el producto de los dos numeros y si la diferencia entre ellos termina en 4 muestra todos los digitos por separado. 
+            var num1 = num3 = parseInt(prompt("Ingrese un numero entero"));
+            var num2 = num4 = parseInt(prompt("Ingrese un numero entero"));
+            if (num1 < 0){
+                num1 = num3 = num1 * (-1);
+            }
+            if(num2 < 0){
+                num2 = num4 = num2 * (-1);
+            }
+            var dig1, dig2, sum1, mult;
+            dig1 = num1.toString().split("");
+            dig1 = dig1.map(x => parseInt(x));
+            console.log(dig1);
+            dig2 = num2.toString().split("");
+            dig2 = dig2.map(x => parseInt(x));
+            console.log(dig2);
+            sum1 = 0;
+            for(let i = 0; i < dig1.length; i++){
+                sum1 = sum1 + dig1[i];
+            }
+            for(let i = 0; i < dig2.length; i++){
+                sum1 = sum1 + dig2[i];
+            }
+            console.log(sum1);
+            mult = num3 * num4;
+            if((Math.abs(num3 - num4)) % 2 == 0){
+                    alert(sum1);
+            }  
+            if((Math.abs(num3 - num4)) % 2 != 0 && (Math.abs(num3 - num4)) < 10){
+                    alert(mult);
+            }
+            if((Math.abs(num3 - num4)) == 4){
+                    alert(dig1);
+                    alert(dig2);
+            }
+            
+        </script>
+    </body>
+</html>

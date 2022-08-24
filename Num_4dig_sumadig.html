@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar la suma de los digitos de un numero de cuatro digitos.
+            var num = num1 = parseInt(prompt("Ingrese un numero de cuatro digitos"));
+            var dig1, dig2, dig3, dig4, R;
+            if(num < 0){
+                num = num1 = num * (-1);
+            }
+            while(num < 1000 || num > 9999){
+                num = parseInt(prompt("Ingrese un numero de cuatro digitos"));
+            }
+            while(num < 1 || num > 9){
+                num = parseInt(num/10);
+            }
+            dig1 = num;
+            dig2 = parseInt(num1/100);
+            dig2 = dig2 - parseInt(dig2/10) * 10;
+            dig3 = parseInt(num1/10);
+            dig3 = dig3 - parseInt(dig3/10) * 10;
+            dig4 = num1 - parseInt(num1/10) * 10;
+            R = dig1 + dig2 + dig3 + dig4;
+            alert("La suma de los digitos es de " + R);
+            
+        </script>
+    </body>
+</html>

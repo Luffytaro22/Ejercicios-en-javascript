@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+            //Programa para mostrar tres numeros enteros ascendentemente.
+            var num1 = parseInt(prompt("Ingrese un numero entero"));
+            var num2 = parseInt(prompt("Ingrese un numero entero"));
+            var num3 = parseInt(prompt("Ingrese un numero entero"));
+            switch(true){
+                case num3 >= num2 && num2 >= num1:
+                    console.log(num1, num2, num3);
+                    break;
+                case num3 >= num1 && num1 >= num2:
+                    console.log(num2, num1, num3);
+                    break;
+                case num1 >= num2 && num2 >= num3:
+                    console.log(num3, num2, num1);
+                    break;
+                case num1 >= num3 && num3 >= num2:
+                    console.log(num2, num3, num1);
+                    break;
+                case num2 >= num1 && num1 >= num3:
+                    console.log(num3, num1, num2);
+                    break;
+                case num2 >= num3 && num3 >= num1:
+                    alert(num1, num3, num2);
+                    break;
+            }
+        </script>
+    </body>
+</html>

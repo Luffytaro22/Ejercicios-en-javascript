@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar si el primer y ultimo digitos de un numero de tres digitos son iguales.
+            var num = num1 = parseInt(prompt("Ingrese un numero de tres digitos"));
+            var dig1, dig2;
+            if(num < 0){
+                num = num * (-1);
+            }
+            while(num < 100 || num > 999){
+                num = parseInt(prompt("Ingrese un numero de tres digitos"));
+            }
+            while(num < 1 || num > 9){
+                dig1 = num = parseInt(num/10);
+            }
+            dig2 = num1 - parseInt(num1/10) * 10;
+            if(dig1 == dig2){
+                alert("El primero y ultimo digito son iguales");
+            }
+            else{
+                alert("El primero y ultimo digito no son iguales");
+            }
+        </script>
+    </body>
+</html>

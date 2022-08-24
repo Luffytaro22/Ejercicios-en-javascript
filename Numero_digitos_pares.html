@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <script>
+            //Programa para determinar si los digitos de un numero entero de dos digitos son pares
+            var num = num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+            var sum = 0;
+            var num1;
+            if(num < 0){
+                num = num3 = num * (-1);
+            }
+            var num2 = num3;
+            while(num != 0){
+                num = parseInt(num/10);
+                sum++;
+            }
+            if(sum != 2){
+                num = num3 = parseInt(prompt("Ingrese un numero de dos digitos"));
+                num1 = num3 - parseInt(num3/10) * 10;
+                while(num2 > 0 && num2 < 1 || num2 > 9){
+                    num2 = parseInt(num3/10);
+                }
+                if(num2 % 2 == 0){
+                    alert("El primer digito es par");
+                }
+                else{
+                    alert("El primero digito no es par");
+                }
+                if(num1 % 2 == 0){
+                    alert("El segundo digito es par");
+                }
+                else{
+                    alert("El segundo digito no es par");
+                }
+            }
+            else{
+                num1 = num3 - parseInt(num3/10) * 10;
+                while(num2 > 0 && num2 < 1 || num2 > 9){
+                    num2 = parseInt(num3/10);
+                }
+                if(num2 % 2 == 0){
+                    alert("El primer digito es par");
+                }
+                else{
+                    alert("El primero digito no es par");
+                }
+                if(num1 % 2 == 0){
+                    alert("El segundo digito es par");
+                }
+                else{
+                    alert("El segundo digito no es par");
+                }
+            }
+        </script>
+    </body>
+</html>
